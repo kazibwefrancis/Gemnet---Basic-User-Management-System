@@ -293,7 +293,10 @@ if (isset($_POST['delete_profile'])) {
 
         <div class="profile-actions">
             <a href="edit-profile.php" class="btn btn-edit">Edit Profile</a>
-            <button class="btn btn-delete" onclick="confirmDelete()">Delete Profile</button>
+            <form method="POST" onsubmit="return confirm('Are you sure you want to permanently delete your profile? This action cannot be undone.');">
+    <button type="submit" name="delete_profile" class="btn btn-delete">Delete Profile</button>
+</form>
+
         </div>
 
         <div class="info-tiles">
